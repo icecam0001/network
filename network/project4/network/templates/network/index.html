@@ -1,0 +1,22 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+<div id="current-user" data-username="{{ user.username }}"></div>
+<form id="makepost">
+    {% csrf_token %}
+    <h1>New Post</h1>
+    <div class="form-group">
+        <input id="post" placeholder="" type="text">
+    </div>
+    <input type="submit">
+</form>
+<div class="pagination">
+    
+    <button id="prev-page" class="btn btn-primary">Previous</button>
+    <span id="page-info"></span>
+    <button id="next-page" class="btn btn-primary">Next</button>
+</div>
+<div id="formy"></div>
+<div id="userinfo"></div>
+<div id="posts-view"></div>
+{% endblock %}
